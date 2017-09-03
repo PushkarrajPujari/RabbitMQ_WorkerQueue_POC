@@ -26,7 +26,7 @@ public class Send{
             for(int i = 0 ;i < 100 ; i ++){
                 message = String.valueOf(i);
                 channel.basicPublish("",Queue_Name,null,message.getBytes());
-                Thread.currentThread().sleep(1000);
+                Thread.currentThread().sleep(100);
             }
             channel.close();
             connection.close();
